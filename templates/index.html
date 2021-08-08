@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>text filter</title>
+    <style>
+        body {
+  margin: 0;
+  color: #000303;
+  background-color: #CCFFE5;
+  text-shadow: rgba(0,0,0,.05) 1px 2px 2px;
+  font-family: "Roboto", Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 3% 30% 0% 38.3%;
+
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-family: 'Fir Sans', sans-serif;
+}
+h1 {
+
+  font-size: 24pt;
+}
+form{
+      width: 400px;
+      height: 80px;
+      font-size: 24pt;
+      display: inline-block;
+      margin: 0% 30% 10% 37%;
+      text-align: left;
+      padding: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="D:\pycharm project\django project\firstproject\templates\index.html">TextFilter.in</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Features</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="abc">
+<h1> Enter your text here....  </h1>
+</div>
+<div class="form">
+<form action="/chat" method="post"> {% csrf_token %}
+    <textarea name="text" style="margin: 0px 0px 0px 0px; height: 112px; width: 381px;"></textarea><br>
+    <p>please chose any one </p>
+    <div class="form-check form-switch">
+  <input type ="checkbox" name="removepunc" class="form-check-input" id="flexSwitchCheckDefault1">
+  <label class="form-check-label" for="flexSwitchCheckDefault1">Remove Punctuation</label>
+</div>
+    <div class="form-check form-switch">
+  <input type ="checkbox" name="uppercase" class="form-check-input" id="flexSwitchCheckDefault2">
+  <label class="form-check-label" for="flexSwitchCheckDefault2">Upper Case </label>
+</div>
+    <div class="form-check form-switch">
+  <input type ="checkbox" name="lowercase" class="form-check-input" id="flexSwitchCheckDefault3">
+  <label class="form-check-label" for="flexSwitchCheckDefault3">Lower Case</label>
+</div>
+    <div class="form-check form-switch">
+  <input type ="checkbox" name="newline" class="form-check-input" id="flexSwitchCheckDefault4">
+  <label class="form-check-label" for="flexSwitchCheckDefault4">Remove New Line</label>
+</div>
+    <button type="submit" class="btn btn-primary" aria-setsize="20">Filter</button>
+</form>
+</div>
+
+</body>
+</html>
